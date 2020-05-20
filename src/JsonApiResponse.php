@@ -2,6 +2,7 @@
 namespace CarloNicora\Minimalism\Modules\JsonApi;
 
 use CarloNicora\JsonApi\Document;
+use CarloNicora\Minimalism\Core\Modules\Interfaces\ResponseInterface;
 use CarloNicora\Minimalism\Core\Response;
 use JsonException;
 
@@ -35,6 +36,7 @@ class JsonApiResponse extends Response
             try {
                 return $this->document->export();
             } catch (JsonException $e) {
+                $this->setStatus(ResponseInterface::HTTP_STATUS_500);
                 return '';
             }
         }
