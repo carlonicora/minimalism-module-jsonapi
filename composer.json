@@ -1,0 +1,37 @@
+{
+  "name": "carlonicora/minimalism-module-jsonapi",
+  "description": "{json:api} support minimalism library minimalism-modul-jsonapi-api and minimalism-modul-jsonapi-web",
+  "version": "1.0.0-beta1",
+  "homepage": "https://carlonicora.com",
+  "time": "2020-05-20",
+  "license": "MIT",
+  "type": "library",
+  "minimum-stability": "beta",
+  "authors": [
+    {
+      "name": "Carlo Nicora",
+      "email": "carlo@carlonicora.com",
+      "homepage": "http://carlonicora.com",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "CarloNicora\\Minimalism\\Modules\\JsonApi\\":"src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "CarloNicora\\Minimalism\\Modules\\JsonApi\\Tests\\": "tests/"
+    }
+  },
+  "require": {
+    "php": "^7.4",
+    "carlonicora/minimalism": "~11.0",
+    "carlonicora/jsonapi": "~2.0",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^9"
+  }
+}
