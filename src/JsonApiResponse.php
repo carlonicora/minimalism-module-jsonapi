@@ -32,7 +32,7 @@ class JsonApiResponse extends Response
      */
     public function getData(): string
     {
-        if ($this->document !== null){
+        if ($this->document !== null && parent::getData() === '') {
             try {
                 return $this->document->export();
             } catch (JsonException $e) {
@@ -40,6 +40,7 @@ class JsonApiResponse extends Response
                 return '';
             }
         }
-        return parent::getData();
+
+        return '';
     }
 }
