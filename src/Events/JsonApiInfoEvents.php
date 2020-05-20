@@ -23,4 +23,14 @@ class JsonApiInfoEvents extends InfoLogMessage
     {
         return new self(3, 'Data generated successfully');
     }
+
+    public static function DATA_MERGED(string $viewName) : LogMessageInterface
+    {
+        return new self(4, 'Data merged with view %s', [$viewName]);
+    }
+
+    public static function RENDER_COMPLETE() : LogMessageInterface
+    {
+        return new self(5, 'Render complete');
+    }
 }
