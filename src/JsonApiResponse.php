@@ -32,7 +32,9 @@ class JsonApiResponse extends Response
      */
     public function getData(): string
     {
-        if ($this->document !== null && parent::getData() === '') {
+        if (parent::getData() !== '') {
+            return parent::getData();
+        } else if ($this->document !== null) {
             try {
                 return $this->document->export();
             } catch (JsonException $e) {
