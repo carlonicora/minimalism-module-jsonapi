@@ -1,12 +1,12 @@
 {
   "name": "carlonicora/minimalism-module-jsonapi",
   "description": "{json:api} support minimalism library minimalism-modul-jsonapi-api and minimalism-modul-jsonapi-web",
-  "version": "1.0.0-beta8",
+  "version": "1.0.0-beta9",
   "homepage": "https://carlonicora.com",
   "time": "2020-05-20",
   "license": "MIT",
   "type": "library",
-  "minimum-stability": "beta",
+  "minimum-stability": "stable",
   "authors": [
     {
       "name": "Carlo Nicora",
